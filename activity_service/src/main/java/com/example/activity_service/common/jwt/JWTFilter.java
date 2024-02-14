@@ -27,7 +27,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 @Component
 public class JWTFilter extends OncePerRequestFilter { // JWT 검증 필터 -> 헤더로 들어온 jwt 토큰을 검증
 
-    private static final String[] whiteList = {"/activity/internal/**","/activity/test"};
+    private static final String[] whiteList = {"/activity/internal/*","/activity/errorful/*","/activity/test"};
     private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String COOKIE_NAME = "refreshToken";
     private final JWTUtil jwtUtil;

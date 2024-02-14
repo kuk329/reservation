@@ -66,7 +66,7 @@ public class SecurityConfig {
         httpSecurity
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers(
-                                "/activity/internal/**","/activity/test/**"
+                                "/activity/internal/**","/activity/errorful/**","/activity/test/**"
                         ).permitAll()
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().authenticated()

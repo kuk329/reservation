@@ -12,4 +12,10 @@ public class TestController {
     public String test(){
         return "success";
     }
+
+    @GetMapping("/health-check")
+    public String health_check(){
+        return "health check";
+    }
+
 }
