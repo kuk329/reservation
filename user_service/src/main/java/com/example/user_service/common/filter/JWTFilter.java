@@ -1,8 +1,9 @@
-package com.example.user_service.common.jwt;
+package com.example.user_service.common.filter;
 
 import static com.example.user_service.common.response.BaseResponseStatus.TOKEN_INVALID;
 
 import com.example.user_service.common.exceptions.BaseException;
+import com.example.user_service.common.jwt.JWTUtil;
 import com.example.user_service.dto.CustomUserDetails;
 import com.example.user_service.entity.User;
 import com.example.user_service.service.TokenService;
