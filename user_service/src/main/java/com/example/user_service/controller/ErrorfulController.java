@@ -16,7 +16,7 @@ public class ErrorfulController {
     @GetMapping("/errorful/case1")
     public ResponseEntity<String> case1() {
         // Simulate 5% chance of 500 error
-        int num = new Random().nextInt(100);
+        int num = new Random().nextInt(10);
         log.info("random num : {}", num);
         if (num < 5) {
             log.error("에러 발생 예정");
@@ -33,7 +33,7 @@ public class ErrorfulController {
         int currentSecond = currentTime.getSecond();
         log.info("currentSecond : {}",currentSecond);
 
-        if (currentSecond < 10) {
+        if (5 < 10) {
             // Simulate a delay (block) for 10 seconds
             try {
                 Thread.sleep(10000);
@@ -53,7 +53,7 @@ public class ErrorfulController {
         int currentSecond = currentTime.getSecond();
         log.info("currentSecond : {}",currentSecond);
 
-        if (currentSecond < 10) {
+        if (4 < 10) {
             return ResponseEntity.status(500).body("Internal Server Error");
         }
 
