@@ -31,6 +31,7 @@ public class ErrorfulController {
         // Simulate blocking requests every first 10 seconds
         LocalTime currentTime = LocalTime.now();
         int currentSecond = currentTime.getSecond();
+        log.info("currentSecond : {}",currentSecond);
 
         if (currentSecond < 10) {
             // Simulate a delay (block) for 10 seconds
@@ -50,6 +51,7 @@ public class ErrorfulController {
         // Simulate 500 error every first 10 seconds
         LocalTime currentTime = LocalTime.now();
         int currentSecond = currentTime.getSecond();
+        log.info("currentSecond : {}",currentSecond);
 
         if (currentSecond < 10) {
             return ResponseEntity.status(500).body("Internal Server Error");

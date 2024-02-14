@@ -18,7 +18,7 @@ public class ErrorController {
     private final UserServiceClient userServiceClient;
 
 
-    @Retry(name="ErrorCase1" )
+    @Retry(name="default" )
     @GetMapping("/case1")
     public ResponseEntity<String> case1() {
         System.out.println("case1 함수 진입");
@@ -26,7 +26,7 @@ public class ErrorController {
         return result;
     }
 
-    @Retry(name="ErrorCase2" )
+    @Retry(name="default" )
     @GetMapping("/case2")
     public ResponseEntity<String> case2() {
         System.out.println("case2 함수 진입");
@@ -34,12 +34,13 @@ public class ErrorController {
         return result;
     }
 
-    @Retry(name="ErrorCase3" )
+    @Retry(name="default" )
     @GetMapping("/case3")
     public ResponseEntity<String> case3() {
         System.out.println("case3 함수 진입");
         ResponseEntity<String> result = userServiceClient.case3();
         return result;
     }
+
 
 }
