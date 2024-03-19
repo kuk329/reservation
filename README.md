@@ -1,4 +1,8 @@
 ## 예약 구매 프로젝트
+
+### ❗️ Repository 변경
+https://github.com/preorder-shop
+
 ### 💡 프로젝트 소개
 해당 프로젝트는 크게 두가지 주제로 나누어져 있습니다. 
 
